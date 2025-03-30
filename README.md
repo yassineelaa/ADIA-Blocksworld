@@ -45,11 +45,11 @@ Ce projet s’appuie sur le modèle classique du **monde des blocs** (Blockworld
    - Ajout de contraintes binaires pour définir la validité des configurations (éviter les cycles, garantir l’intégrité des piles).
 
 3. **Planification**  
-   - Développement de planificateurs (ex. `DFSPlanner`, `BFSPlanner`) pour résoudre des problèmes de planification.  
+   - Développement de planificateurs (ex. `DFSPlanner`, `BFSPlanner`, `AStar`, `Dijikstra`) pour résoudre des problèmes de planification.  
    - Exploration de solutions à l’aide d’algorithmes de recherche et d’optimisation.
 
 4. **Satisfaction de contraintes**  
-   - Utilisation de techniques (ex. backtracking) pour résoudre des problèmes où l’on doit respecter un ensemble de contraintes tout en trouvant des configurations valides.
+   - Utilisation de techniques (ex. backtracking, MACSolver) pour résoudre des problèmes où l’on doit respecter un ensemble de contraintes tout en trouvant des configurations valides.
 
 5. **Extraction de connaissances**  
    - Application d’algorithmes d’extraction de motifs (ex. Apriori) afin de découvrir des relations entre différentes configurations et de générer des règles d’association.
