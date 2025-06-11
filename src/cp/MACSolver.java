@@ -63,8 +63,12 @@ public class MACSolver extends AbstractSolver {
             Map<Variable, Object> newInstantiation = new HashMap<>(partialInstantiation);
             newInstantiation.put(var, value);
             if (isConsistent(newInstantiation)) {
-                
-                Map<Variable, Object> result = solverecMac(newInstantiation, listVariables, evoDomain);
+                Map<Variable, Set<Object>> newDomains = new HashMap<>();
+                for (Map.Entry<Variable, Set<Object>> entry : evoDomain.entrySet()) {
+                    newDomains.put(entry.getKey(), new HashSet<>(entry.getValue()));
+                }
+
+                Map<Variable, Object> result = solverecMac(newInstantiation, listVariables, newDomains);
 
                 if (result != null) {
                     return result;
