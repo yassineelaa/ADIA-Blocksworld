@@ -49,4 +49,4 @@ Détails des Options
         Vérifiez que vous exécutez le script depuis le bon répertoire (la racine).
 
     Choix Invalide :
-        Si vous entrez un choix invalide, le script vous invitera à réessayer
+        Si vous entrez un choix invalide, le script vous invitera à réessayer .

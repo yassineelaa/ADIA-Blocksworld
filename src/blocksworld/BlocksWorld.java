@@ -1,7 +1,7 @@
 package blocksworld;
 import java.util.*;
 import modelling.*;
-
+/** */
 /**
  * La classe BlocksWorld représente le monde des blocs avec des piles. 
  * Elle définit les variables nécessaires pour modéliser les positions, les états fixes des blocs, 
