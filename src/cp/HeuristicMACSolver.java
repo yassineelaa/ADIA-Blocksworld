@@ -85,8 +85,14 @@ public class HeuristicMACSolver extends AbstractSolver {
                     
                     newListVariables.remove(var);
 
+                    // Créer une copie des domaines pour l'appel récursif
+                    Map<Variable, Set<Object>> newDomains = new HashMap<>();
+                    for (Map.Entry<Variable, Set<Object>> entry : evoDomains.entrySet()) {
+                        newDomains.put(entry.getKey(), new HashSet<>(entry.getValue()));
+                    }
+
                     // Appeler récursive
-                    Map<Variable, Object> result = MAC(newInstanciation, newListVariables, evoDomains);
+                    Map<Variable, Object> result = MAC(newInstanciation, newListVariables, newDomains);
 
                     if (result != null) {
                         return result;
